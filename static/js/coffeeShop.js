@@ -1,5 +1,6 @@
 "use strict";
 
+//add item to cart-items by creating a row and cell for item
 const addItemToCart = (itemName) => {
   $('#cart-items').append(`
     <tr>
@@ -8,11 +9,13 @@ const addItemToCart = (itemName) => {
   `);
 };
 
+//update cart-total to 0 and empty items in cart-items table
 const resetCart = () => {
   $('#cart-total').html('0.00');
   $('#cart-items').empty();
 };
 
+//take in price of new item, add it to the cart-total
 const incrementCartTotal = (price) => {
   const cartTotal = $('#cart-total');
 
